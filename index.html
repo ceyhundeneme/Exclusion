@@ -1,0 +1,234 @@
+<html lang="en"><!DOCTYPE html>
+
+ <!-- 
+/* 
+  
+This document contains all instructions which appear in the paradigm, along with some basic functionality. You can change all text by following the instructions below. 
+
+If you don't have experience with programming, it is important that you alter only the plain text, as indicated in the instructions, and leave any functional elements intact.
+*/ 
+--> 
+
+<meta charset="utf-8">
+<title>Intro</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="">
+<meta name="author" content="">
+
+<link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/2.3.0/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/alertify.js/0.3.10/css/alertify.min.css" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/alertify.js/0.3.10/css/themes/default.min.css" rel="stylesheet">
+
+<link href="style.css" rel="stylesheet">
+
+<!-- For IE6-8 support of HTML5 elements -->
+<!--[if lt IE 9]>
+  <script src="http://html5shim.googlecode.com/svn/trunk/html5.js">
+  </script>
+<![endif]-->
+
+<!-- Javascript -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/0.3.0/mustache.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/alertify.js/0.3.10/alertify.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/masonry/2.1.08/jquery.masonry.min.js"></script>
+
+<script src="shortcut.js"></script>
+<script src="main.js"></script>
+<script src="profiles.js"></script>
+</head>
+
+<body oncontextmenu="return false;">
+<div class="container">
+
+
+
+<div id="intro" style="display:none;" class="instr">
+ <!-- 
+/* 
+  
+**Intro**
+---------
+You can edit this text using basic HTML elements for styling (e.g., <br>, <h3>).
+
+*/ 
+--> <h3> Çalışmaya Hoşgeldiniz</h3>
+Bu çalışma, Yaşar Üniversitesi Psikoloji bölümü yüksek lisans öğrencisi Psk. Ceyhun Yener tarafından tez çalışması kapsamında Doç. Dr. Sinan Alper danışmanlığında tarafından yürütülen bilimsel bir araştırmadır.<br><br>
+Çalışmaya katılım gönüllülük esasına dayalıdır ve kişisel bilgilerinizi vermeniz istenmeyecektir. Cevaplarınız gizli tutulacak ve oluşturulan veri seti sadece bilimsel amaçlarla kullanılacaktır. Herhangi bir rahatsızlık duyduğunuz durumda çalışmadan istediğiniz zaman ayrılabileceğinizi bilgilerinize sunarız. <br><br>
+
+Bu çalışmada yapay sosyal medya üzerinde, internet aracılığıyla bağlanacağınız diğer katılımcılarla birlikte bir dizi basit görevi tamamlayacaksınız 
+  <br><br>
+  İlk olarak, çalışmaya katılan tüm katılımcılar kişisel "avatarlar" seçecek ve kendilerini tanıtan kısa metinler yazacaklar.
+  <br><br>
+  Görevlere başlamadan önce, diğer katılımcılarla birlikte 3 dakika geçireceksiniz. Bu süre zarfında, birbirinizin kısa tanıtımlarını ("tweetlerini") okuyup tepki verebileceksiniz. Süre bitiminde <b>"Ankete Git"</b> butonuna tıklayarak kısa bir anket doldurmanız beklenmektedir.
+  <br><br>
+  Diğer sayfalarda yönergeler devam edecektir.<br><br>
+  <b>Teşekkür ederiz!</b><br><br>
+  <button type="submit" id="submit_intro">Devam</button>
+</div>
+
+
+
+<div id="name" style="display:none;" class="instr">
+<!-- 
+/* 
+  
+**Username**
+---------
+You can edit the instructions text for entering usernames below.
+
+*/ 
+-->
+	<h3>Lütfen isminizi giriniz</h3>
+	Adınız, takma ad veya baş harfleriniz olabilir<br><br>
+	
+	<input type="text" id="username"  autocomplete="off" /><br>	<br>
+	<button type="submit"  id="submit_username">Devam</button>
+</div>
+
+
+
+<div id="avatar" style="display:none;">	
+<!-- 
+/* 
+  
+**Avatar choice**
+---------
+You can edit the instructions text. The text "Your choice of avatar will not be recorded or analyzed" depends on whether you record the choice of avatar.
+
+*/ 
+-->	<h3>Lütfen Avatarınızı seçiniz</h3>
+Bu avatar, çalışma sırasında sizi temsil edecek ancak yanıtlarınızla bağlantılı olmayacak.  <br>Avatarınızın seçimi kaydedilmeyecek veya analiz edilmeyecek.
+	<br><br>
+	<div class="avatars"></div>
+	<br><button type="submit"  id="submit_avatar">Devam</button>
+	<br><br>
+</div>	
+
+
+<div id="text" style="display:none;" class="instr">	
+<!-- 
+/* 
+  
+**Description entry**
+---------
+You can edit the instructions text. 
+
+*/ 
+-->	<h3>Lütfen kendinizi tanıtın </h3>
+Lütfen diğer katılımcılara kendinizi tanıtmak için kısa bir paragraf yazın. <br>
+Kendinizle ilgili hoşunuza giden şeyleri veya paylaşmak istediğiniz olayları yazabilirsiniz. - Espri yapmaktan da çekinmeyin.
+	<br><br>	
+	<textarea id="description" autocomplete="off" /></textarea><br>
+	<span id="count">Harf sınırı 400</span><br><br>
+	<button type="submit" id="submit_text">Devam</button>
+</div>	
+
+
+
+<div id="fb_intro" style="display:none;" class="instr">
+<!-- 
+/* 
+  
+**Task instructions**
+---------
+You can edit the instructions text. The prompt to try and form an impression of the other players is recommended in all ostacism paradigms. Defining the action of "liking" is also recommended. The information regarding task duration can be adjusted to match the actual duration you have set.
+
+*/ 
+-->  <h3>Grup Tanıtımı </h3>
+Bağlandıktan hemen sonra, diğer katılımcıların kendileri hakkında yazdıkları tanımları görebileceksiniz. <br>
+Onlar hakkındaki kısa tanıtımları okuyabilir ve "like" tuşuna basarak tıpkı Instagram, Facebook ve Twitterdaki olduğu gibi tepki verebilirsiniz <br>
+  <br>
+  Etkileşiminiz minimal olsa da, gruptaki insanlar hakkında bir izlenim oluşturmaya çalışın. Onları gerçek hayatta nasıl olabileceklerini hayal edin - nasıl görünebileceklerini, ne tür insanlar olduklarını, onlarla nasıl anlaşabileceğinizi düşünün. <br>
+  <br><br>Bu aşama 3 dakika sürecektir ve ardından <b>"Ankete Git"</b> butonu ortaya çıkacaktır. Anket çalışma için çok önemlidir. Lütfen 3 dakika sonunda butona tıklayarak anketi sonuna kadar doldurunuz..
+  <br>Lütfen sayfa değiştirmeyiniz. Diğer katılımcılarla ilgili sorular yöneltilebilir.
+  <br><br><b>Eğer bu yönergeleri anladıysanız "Bağlan" tuşuna basarak çalışmaya başlayabilir, yönergeleri bir kere daha okuma gereksinimi duyuyorsanız tekrardan çalışma linkine tıklayarak baştan başlayabilirsiniz</b><br>
+  <br>
+  <button type="submit"  id="submit_fb_intro">Bağlan</button>
+</div>
+
+
+
+<div id="fb_login" style="display:none;" class="instr">
+  <h3>Bağlantı Kuruluyor</h3>
+  Lütfen grubunuzdaki diğer katılımcılara birlikte sunucuya bağlanırken bekleyin. Süre bitiminde ortaya çıkacak <b>"Ankete Git"</b> butonuna tıklamayı unutmayınız. <br><br>
+  <img class="load" src='ajax-loader.gif' id="loader">
+  <div id="msg_all_done" style="display:none;">
+  <br>
+  	<b>Tüm katılımcılar bağlandı ve devam etmeye hazırsınız.</b><br><br>
+  	<button type="submit"  id="submit_fb_login">Devam</button>
+  </div>
+</div>
+
+
+<!-- 
+/* 
+  
+**In-task instructions and timer**
+---------
+You can edit the instructions text. 
+
+*/ 
+-->
+<div id="task" style="display:none;">
+	<div id="countdown"><span class="secs" style="display: none;"></span>Birinin tanımını beğendiyseniz "Like"a tıklayabilirsiniz. Süre sıfırlandığında ankete git butonu çıkacaktır. Lütfen tıklayınız.<br><br>kalan süre:<br><span id="timer" class="cntr label label-info"></span>
+	<br>
+	<button type="submit" id='final-continue' style="display:none;">Ankete Git</button>	
+	</div>
+</div>
+<script type="template/text" id="usertmp">
+  {{#posts}}
+    
+    <div class="entry">
+    <div class="tophalf">
+
+    	<img src="{{avatar}}" class="avatar">
+    	<h3>{{username}}</h3>
+
+    	<div class="main">
+    		<p>{{text}}</p>
+    	</div>
+
+    	<br style="clear:both;">
+
+    </div>	
+
+    <div class="bottomhalf">
+    	Likes <span class="badge badge-custom userslikes" data-likes="{{likes}}" data-usernames="{{usernames}}">0</span>
+    </div>
+    </div>
+
+  {{/posts}}  
+</script>
+
+
+<script type="template/text" id="otherstmp">
+  {{#posts}}
+    <div class="entry">
+    <div class="tophalf">
+
+    	<img src="{{avatar}}" class="avatar">
+        <h3>{{username}}</h3>
+    	
+    	<div class="main">
+    		
+    		<p>{{text}}</p>
+    	</div>
+
+    	<br style="clear:both;">
+
+    </div>	
+
+    <div class="bottomhalf">
+    	Likes <span class="badge badge-custom otherslikes" data-likes="{{likes}}">0</span>
+    	<button type="submit" class="btn pull-right btn-like btn-custom btn-deround">Like <i class="icon-thumbs-up icon-white"></i></button>
+    </div>
+
+    </div>
+  {{/posts}}  
+</script>
+
+
+</body>
+</html>
